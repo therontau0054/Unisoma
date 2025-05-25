@@ -1,0 +1,46 @@
+title = "Experimental configs for Rice Grip"
+
+[rollout]
+model_name = "Unisoma"
+description = "Autoregressive Task on Rice Grip"
+version = "250526_1"
+
+assets_root = "./root_folder/rice_grip/assets"
+data_root = "./root_folder/rice_grip/data"
+
+
+[rollout.hyperparameter]
+seed = 42
+lr = 3e-4
+lr_decay = 5
+epochs = 100
+weight_decay = 0
+batch_size = 40
+eval_per_epoch = 10
+noise_sigma = 1e-3
+device = "cuda:0"
+criterion = "mse l2"
+
+
+[rollout.unisoma]
+emb_dim = 128
+slice_num = 32
+use_edge = true
+k = 3
+load_dim = 6
+rigid_dim = 3
+input_deformable_dim = 3
+output_deformable_dim = 3
+load_num = 2
+rigid_num = 2
+deformable_num = 1
+contact_id = [
+    [0, 1], 
+    [0, 2]
+]
+processor_num = 2
+attention_heads_num = 8
+mlp_ratio = 4
+dropout = 0
+bias = false
+act = "gelu"

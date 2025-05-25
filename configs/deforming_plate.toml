@@ -1,0 +1,44 @@
+title = "Experimental configs for Deforming Plate"
+
+[longtime]
+model_name = "Unisoma"
+description = "Longtime Task on Deforming Plate"
+version = "250526_1"
+
+assets_root = "./root_folder/deforming_plate/assets"
+data_root = "./root_folder/deforming_plate/data"
+
+
+[longtime.hyperparameter]
+seed = 42
+lr = 3e-4
+lr_decay = 10
+epochs = 200
+weight_decay = 1e-5
+batch_size = 1
+eval_per_epoch = 10
+device = "cuda:0"
+criterion = "relative l2"
+
+
+[longtime.unisoma]
+emb_dim = 128
+slice_num = 32
+use_edge = true
+k = 3
+load_dim = 6
+rigid_dim = 3
+input_deformable_dim = 3
+output_deformable_dim = 4
+load_num = 1
+rigid_num = 1
+deformable_num = 1
+contact_id = [
+    [0, 1]
+]
+processor_num = 2
+attention_heads_num = 8
+mlp_ratio = 4
+dropout = 0
+bias = false
+act = "gelu"

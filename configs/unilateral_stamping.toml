@@ -1,0 +1,42 @@
+title = "Experimental configs for Unilateral Stamping"
+
+[longtime]
+model_name = "Unisoma"
+description = "Longtime Task on Unilateral Stamping"
+version = "250526_1"
+
+assets_root = "./root_folder/unilateral_stamping/assets"
+data_root = "./root_folder/unilateral_stamping/data"
+
+
+[longtime.hyperparameter]
+seed = 42
+lr = 3e-4
+lr_decay = 10
+epochs = 100
+weight_decay = 1e-5
+batch_size = 1
+eval_per_epoch = 20
+device = "cuda:0"
+criterion = "relative l2"
+
+
+[longtime.unisoma]
+emb_dim = 128
+slice_num = 32
+use_edge = true
+k = 3
+load_dim = 6
+rigid_dim = 3
+input_deformable_dim = 3
+output_deformable_dim = 5
+load_num = 16
+rigid_num = 17
+deformable_num = 2
+contact_id = "write in python file"
+processor_num = 2
+attention_heads_num = 8
+mlp_ratio = 4
+dropout = 0
+bias = false
+act = "gelu"
