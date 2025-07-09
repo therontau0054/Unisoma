@@ -137,7 +137,7 @@ def train(data_path, net, config, normalizers, criterion):
                 batch_num += 1
             scheduler.step()
         mean_train_loss /= batch_num
-        mean_train_losses = [mtl / len(train_datas) for mtl in mean_train_losses]
+        mean_train_losses = [mtl / batch_num for mtl in mean_train_losses]
         print(f"epoch: {epoch}, mean_train_loss: {mean_train_loss}, ", end = "")
         for j in range(len(mean_train_losses)):
             print(f"mean_train_loss_{j}: {mean_train_losses[j].data}, ", end = "")
