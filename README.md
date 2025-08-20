@@ -20,11 +20,13 @@ pip install -r requirements.txt
 
 ### Prepare Data
 
-You can download datasets from the [link]().
+You can download datasets from the [link](https://drive.google.com/drive/folders/1bYeYYsOnBgxujN7mv8Lx8YILykc6GzY-?usp=sharing).
 
 - Except for the Tissue Manipulation dataset, we preprocess other public datasets. You can download Tissue Manipulation dataset in [GGNS repo](https://github.com/jlinki/GGNS). 
 
 - We provide self-curated datasets as well as certain preprocessed public datasets. If any copyright infringement is identified, please contact us at shilongtao@stu.pku.edu.cn, and we will address the issue promptly.
+
+**\*\*\*** Update on 2025.08.20. So far, we have uploaded the public datasets used in the paper, including Cavity Grasping, Deforming Plate, and Rice Grip. The other datasets we created in this work are part of our ongoing project and are currently under internal review and sensitive information screening, so they cannot be made publicly available at this moment. We will release them **no later than October of this year**. Thank you for your understanding.
 
 - The dataset should put in `input` folder with following file structure. Take `bilateral_stamping` as an example:
 
@@ -58,7 +60,7 @@ setsid python -u exp_xxx.py &
 
 ## Visualization
 
-### Visualization of error maps.
+### Visualization of error maps
 
 <img src = "./assets/visualization.png" alt = "visualization" width = "800">
 
@@ -82,8 +84,22 @@ Any further questions, please contact shilongtao@stu.pku.edu.cn.
 ## Citation
 
 If you find this repo useful for you, please consider citing the following paper:
+
 ```
-# TODO
+@inproceedings{tao2025unisoma,
+  title={Unisoma: A Unified Transformer-based Solver for Multi-Solid Systems},
+  author={Tao, Shilong and Feng, Zhe and Sun, Haonan and Zhu, Zhanxing and Liu, Yunhuai},
+  booktitle={Forty-second International Conference on Machine Learning},
+  year={2025}
+}
+
+@inproceedings{tao2025ladeep,
+  title={LaDEEP: A Deep Learning-based Surrogate Model for Large Deformation of Elastic-Plastic Solids},
+  author={Tao, Shilong and Feng, Zhe and Sun, Haonan and Zhu, Zhanxing and Liu, Yunhuai},
+  booktitle={Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2},
+  year={2025}
+}
+
 ```
 
 ## Acknowledgement
