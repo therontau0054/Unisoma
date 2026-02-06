@@ -1,6 +1,6 @@
 # Unisoma (ICML 2025)
 
-Code for "Unisoma: A Unified Transformer-based Solver for Multi-Solid Systems", accepted at International Conference on Machine Learning (ICML 2025).
+Code for "[Unisoma: A Unified Transformer-based Solver for Multi-Solid Systems](https://arxiv.org/abs/2506.06021)", accepted at International Conference on Machine Learning (ICML 2025).
 
 ![Overview](./assets/overview.png)
 
